@@ -6,16 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".NewNoteFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Note Screen"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Note Screen"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"
+            android:textSize="24sp"
+            />
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
