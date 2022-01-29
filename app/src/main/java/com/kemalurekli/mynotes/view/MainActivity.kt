@@ -1,4 +1,4 @@
-package com.kemalurekli.mynotes
+package com.kemalurekli.mynotes.view
 
 
 import androidx.appcompat.app.AppCompatActivity

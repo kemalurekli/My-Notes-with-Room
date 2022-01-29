@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.kemalurekli.mynotes.MainFragment"
+        android:name="com.kemalurekli.mynotes.view.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.kemalurekli.mynotes.DetailsFragment"
+        android:name="com.kemalurekli.mynotes.view.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/newNoteFragment"
-        android:name="com.kemalurekli.mynotes.NewNoteFragment"
+        android:name="com.kemalurekli.mynotes.view.NewNoteFragment"
         android:label="fragment_new_note"
         tools:layout="@layout/fragment_new_note" />
 </navigation>

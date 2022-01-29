@@ -9,9 +9,6 @@ import java.util.*
 data class Note(
     @ColumnInfo(name="yourNotes")
     val yourNotes : String?,
-    @ColumnInfo(name = "creationDate")
-    var creationDate: Date = Date(System.currentTimeMillis()),
-
     @PrimaryKey(autoGenerate = true)
     val uuid: Int = 0
 

@@ -1,15 +1,20 @@
-package com.kemalurekli.mynotes
+package com.kemalurekli.mynotes.view
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.kemalurekli.mynotes.R
 import com.kemalurekli.mynotes.databinding.FragmentNewNoteBinding
+import com.kemalurekli.mynotes.viewmodel.MainFragmentViewModel
+import com.kemalurekli.mynotes.viewmodel.NewNoteFragmentViewModel
 
 
 class NewNoteFragment : Fragment() {
     private var _binding: FragmentNewNoteBinding? = null
     private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var viewModel : NewNoteFragmentViewModel
+            override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
     }
@@ -20,6 +25,7 @@ class NewNoteFragment : Fragment() {
     ): View? {
         _binding = FragmentNewNoteBinding.inflate(inflater, container, false)
         val view = binding.root
+        viewModel = ViewModelProvider(this)[NewNoteFragmentViewModel::class.java]
         return view
     }
 
