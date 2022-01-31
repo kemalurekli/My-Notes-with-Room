@@ -39,7 +39,7 @@ class MainFragment : Fragment() {
 
         binding.NoteRv.layoutManager = LinearLayoutManager(context)
         binding.NoteRv.adapter = noteAdapter
-        viewModel.getDataFromRoom()
+        viewModel.getDataFromSQLite()
         observeLiveData()
     }
 

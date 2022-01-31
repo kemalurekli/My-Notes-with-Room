@@ -8,7 +8,7 @@ import com.kemalurekli.mynotes.model.Note
 @Dao
 interface NotesDao {
 
-    @Insert
+    @Insert()
     suspend fun insertNote(vararg note : Note) : List<Long>
 
 

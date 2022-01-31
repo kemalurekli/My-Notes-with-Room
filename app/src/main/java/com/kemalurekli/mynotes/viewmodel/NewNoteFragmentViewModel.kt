@@ -7,11 +7,13 @@ import com.kemalurekli.mynotes.service.NoteDatabase
 import kotlinx.coroutines.launch
 
 class NewNoteFragmentViewModel (application: Application) : BaseViewModel (application) {
-    fun saveRoom (list: List<Note>) {
+    fun saveRoom (note: Note) {
 
         launch {
             val dao = NoteDatabase(getApplication()).notesDao()
-            val dataList = dao.insertNote(*list.toTypedArray())
+            val dataList = dao.insertNote(Note(note.yourNotes))
         }
     }
+
+
 }
