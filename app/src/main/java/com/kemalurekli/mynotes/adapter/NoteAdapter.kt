@@ -1,12 +1,13 @@
 package com.kemalurekli.mynotes.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.kemalurekli.mynotes.R
 import com.kemalurekli.mynotes.databinding.ItemNoteBinding
 import com.kemalurekli.mynotes.model.Note
+import com.kemalurekli.mynotes.view.MainFragmentDirections
+
 import java.util.ArrayList
 
 class NoteAdapter(val noteList : ArrayList<Note>)
@@ -27,6 +28,11 @@ class NoteAdapter(val noteList : ArrayList<Note>)
         holder.rowLayoutBinding.apply {
             tvNote.text = note.yourNotes
             tvId.text = note.uuid.toString()
+        }
+
+        holder.rowLayoutBinding.tvNote.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToDetailsFragment(noteList[position].uuid.toString())
+            Navigation.findNavController(it).navigate(action)
         }
     }
 

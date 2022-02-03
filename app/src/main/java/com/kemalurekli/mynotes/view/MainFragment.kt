@@ -36,7 +36,6 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
-
         binding.NoteRv.layoutManager = LinearLayoutManager(context)
         binding.NoteRv.adapter = noteAdapter
         viewModel.getDataFromSQLite()

@@ -12,6 +12,7 @@
         android:id="@+id/tv_id"
         android:text="4."
         android:textStyle="bold"
+        android:layout_marginEnd="5dp"
         android:layout_weight="0.05"
         android:textColor="@color/black"
         android:textSize="18sp" />
@@ -22,6 +23,7 @@
         android:layout_weight="0.95"
         android:fontFamily="@font/amaranth"
         android:text="This is a note"
+        android:maxLength="80"
         android:textColor="@color/black"
         android:textSize="20sp" />
 

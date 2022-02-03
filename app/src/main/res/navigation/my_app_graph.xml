@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_detailsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="noteId"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/newNoteFragment"

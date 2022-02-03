@@ -7,27 +7,16 @@
     android:background="@color/yellow"
     tools:context=".view.NewNoteFragment">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_newnote"
-            android:text="New Note Screen"
-            android:textColor="@color/black"
-            android:layout_margin="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textSize="24sp"
-            />
+
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:id="@+id/et_text"
             android:hint="your notes here"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_newnote"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
 
