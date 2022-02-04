@@ -24,4 +24,9 @@ class DetailsFragmentViewModel (application: Application) : BaseViewModel(applic
             NoteDatabase(getApplication()).notesDao().deleteNote(uuid)
         }
     }
+    fun updateNoteFromRoom (note: Note){
+        launch {
+            NoteDatabase(getApplication()).notesDao().updateNote(note)
+        }
+    }
 }

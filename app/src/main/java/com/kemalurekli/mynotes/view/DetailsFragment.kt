@@ -59,7 +59,8 @@ class DetailsFragment : Fragment() {
         return when (item.itemId) {
             R.id.update_note -> {
                 if (binding.tvNoteDetails.text != null && binding.tvNoteDetails.text.toString() != ""){
-
+                    val updatedNote = Note(binding.tvNoteDetails.text.toString(),noteid)
+                    viewModel.updateNoteFromRoom(updatedNote)
                     Navigation.findNavController(requireView()).navigate(DetailsFragmentDirections.actionDetailsFragmentToMainFragment())
                 }else{
                     Toast.makeText(requireContext(),"Please write a note", Toast.LENGTH_LONG).show();
@@ -79,7 +80,7 @@ class DetailsFragment : Fragment() {
     private fun observeLiveData() {
         viewModel.noteLiveData.observe(viewLifecycleOwner, Observer { note->
             note?.let {
-                binding.tvNoteDetails.text = note.yourNotes
+                binding.tvNoteDetails.setText(note.yourNotes)
             }
         })
     }

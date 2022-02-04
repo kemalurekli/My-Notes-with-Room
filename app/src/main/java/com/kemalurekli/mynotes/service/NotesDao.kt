@@ -16,4 +16,7 @@ interface NotesDao {
 
     @Query("DELETE FROM note WHERE uuid = :noteId")
     suspend fun deleteNote (noteId : Int)
+
+    @Update()
+    suspend fun updateNote (note : Note)
 }
